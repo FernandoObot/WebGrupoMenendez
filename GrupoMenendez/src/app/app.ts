@@ -6,9 +6,10 @@ import { Presentacion } from './presentacion/presentacion';
 import { SobreNosotros } from './sobre-nosotros/sobre-nosotros';
 import { Servicios } from './servicios/servicios';
 import { ProyectosDestacados } from './proyectos-destacados/proyectos-destacados';
+import { NuestroProceso } from './nuestro-proceso/nuestro-proceso';
 
 @Component({
-  imports: [RouterOutlet, Navbar, Footer, Presentacion, SobreNosotros, Servicios, ProyectosDestacados],
+  imports: [RouterOutlet, Navbar, Footer, Presentacion, SobreNosotros, Servicios, ProyectosDestacados, NuestroProceso],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
