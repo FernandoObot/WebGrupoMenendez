@@ -41,3 +41,54 @@
     </div>
   </div>
 </section>
+
+<section style="background:#F8F7F6;padding:4.5rem 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 1.5rem;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <p style="font-family:'Crimson Text',serif;font-weight:600;font-size:1rem;letter-spacing:2.5px;text-transform:uppercase;color:#F19000;margin-bottom:0.8rem;">Proyecto destacado</p>
+    </div>
+    <div style="border-radius:1rem;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(131,124,121,0.2);box-shadow:0 4px 30px rgba(34,35,34,0.1);">
+      <div style="overflow:hidden;min-height:380px;">
+        <img [src]="imgUrl(featured.photo)" [alt]="featured.title" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div style="background:white;padding:3rem;display:flex;flex-direction:column;justify-content:center;">
+        <span style="display:inline-block;background:rgba(241,144,0,0.1);color:#F19000;font-size:0.75rem;font-family:'Jost',sans-serif;font-weight:600;padding:0.25rem 0.75rem;border-radius:9999px;margin-bottom:0.75rem;width:fit-content;">PROYECTO DESTACADO</span>
+        <h2 style="font-family:'Jost',sans-serif;font-weight:700;color:#222322;font-size:clamp(1.8rem,2.5vw,2.4rem);line-height:1.2;margin-bottom:1.5rem;">{{ featured.title }}</h2>
+        <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+          <div style="display:flex;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#F19000;margin-top:6px;flex-shrink:0;"></div>
+            <div>
+              <dt style="font-family:'Jost',sans-serif;font-weight:600;color:#222322;font-size:0.875rem;">Ubicación</dt>
+              <dd style="font-family:'Jost',sans-serif;color:#837C79;font-size:0.875rem;line-height:1.6;margin:0;">Veracruz, México</dd>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#F19000;margin-top:6px;flex-shrink:0;"></div>
+            <div>
+              <dt style="font-family:'Jost',sans-serif;font-weight:600;color:#222322;font-size:0.875rem;">Servicio ofrecido</dt>
+              <dd style="font-family:'Jost',sans-serif;color:#837C79;font-size:0.875rem;line-height:1.6;margin:0;">{{ featured.service }}</dd>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#F19000;margin-top:6px;flex-shrink:0;"></div>
+            <div>
+              <dt style="font-family:'Jost',sans-serif;font-weight:600;color:#222322;font-size:0.875rem;">Alcance de trabajo</dt>
+              <dd style="font-family:'Jost',sans-serif;color:#837C79;font-size:0.875rem;line-height:1.6;margin:0;">Rehabilitación completa de vialidades con pavimento asfáltico, guarniciones y banquetas</dd>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#F19000;margin-top:6px;flex-shrink:0;"></div>
+            <div>
+              <dt style="font-family:'Jost',sans-serif;font-weight:600;color:#222322;font-size:0.875rem;">Beneficio obtenido</dt>
+              <dd style="font-family:'Jost',sans-serif;color:#837C79;font-size:0.875rem;line-height:1.6;margin:0;">{{ featured.benefit }}</dd>
+            </div>
+          </div>
+        </div>
+        <button style="display:flex;align-items:center;gap:0.4em;background:#F19000;color:white;padding:0.75rem 1.5rem;border:none;border-radius:10px;font-family:'Jost',sans-serif;font-weight:600;font-size:0.95rem;cursor:pointer;width:fit-content;">
+          Solicita información
+          [icono flecha derecha]
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

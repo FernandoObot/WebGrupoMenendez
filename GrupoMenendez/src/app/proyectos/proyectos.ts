@@ -35,6 +35,7 @@ const imgUrl = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&h=
 })
 export class Proyectos {
   activeFilter = signal('Todos');
+  featured = projects[0];
 
   get filtered(): Project[] {
     const f = this.activeFilter();
