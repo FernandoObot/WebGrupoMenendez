@@ -2,15 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
-import { Presentacion } from './presentacion/presentacion';
-import { SobreNosotros } from './sobre-nosotros/sobre-nosotros';
-import { Servicios } from './servicios/servicios';
-import { ProyectosDestacados } from './proyectos-destacados/proyectos-destacados';
-import { NuestroProceso } from './nuestro-proceso/nuestro-proceso';
-import { CtaContacto } from './cta-contacto/cta-contacto';
+import { Home } from './home/home';
+import { Nosotros } from './nosotros/nosotros';
 
 @Component({
-  imports: [RouterOutlet, Navbar, Footer, Presentacion, SobreNosotros, Servicios, ProyectosDestacados, NuestroProceso, CtaContacto],
+  imports: [RouterOutlet, Navbar, Footer, Home, Nosotros],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
