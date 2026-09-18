@@ -1,5 +1,5 @@
 <section style="position:relative;min-height:70vh;display:flex;align-items:center;overflow:hidden;">
-  <img src="assets/images/1429497419816-9ca5cfb4571a.jpeg" alt="Proyectos de construcción" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+  <img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?w=1920&h=1080&fit=crop&auto=format&q=80" alt="Proyectos de construcción" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
   <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(34,35,34,0.88) 55%, rgba(34,35,34,0.5));"></div>
   <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:0 1.5rem;width:100%;padding-top:5rem;padding-bottom:5rem;">
     <div style="max-width:28rem;">
@@ -15,6 +15,29 @@
           <div style="font-family:'Jost',sans-serif;color:rgba(255,255,255,0.6);font-size:0.875rem;">de experiencia</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#FFFFFF;padding:4.5rem 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 1.5rem;">
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-bottom:2.5rem;">
+      <button *ngFor="let cat of getCategories()" (click)="setFilter(cat)" [style.background]="activeFilter() === cat ? '#F19000' : 'white'" [style.color]="activeFilter() === cat ? 'white' : '#222322'" [style.border-color]="activeFilter() === cat ? '#F19000' : 'rgba(131,124,121,0.4)'" style="padding:0.5rem 1.5rem;border-radius:9999px;font-family:'Jost',sans-serif;font-weight:500;font-size:0.875rem;border:1px solid;cursor:pointer;">{{ cat }}</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;">
+      <div *ngFor="let p of filtered" style="border-radius:0.75rem;overflow:hidden;border:1px solid rgba(131,124,121,0.2);background:white;cursor:pointer;">
+        <div style="height:14rem;overflow:hidden;">
+          <img [src]="imgUrl(p.photo)" [alt]="p.title" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+        <div style="padding:1.5rem;">
+          <span style="display:inline-block;background:rgba(241,144,0,0.1);color:#F19000;font-size:0.75rem;font-family:'Jost',sans-serif;font-weight:600;padding:0.25rem 0.75rem;border-radius:9999px;margin-bottom:0.75rem;">{{ p.service }}</span>
+          <h3 style="font-family:'Jost',sans-serif;font-weight:700;color:#222322;font-size:1.1rem;margin-bottom:0.5rem;">{{ p.title }}</h3>
+          <p style="font-family:'Jost',sans-serif;color:#837C79;font-size:0.875rem;line-height:1.6;margin:0;">{{ p.benefit }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="filtered.length === 0" style="text-align:center;padding:3rem;">
+      <p style="font-family:'Jost',sans-serif;color:#837C79;font-size:1rem;">No hay proyectos en esta categoría aún.</p>
     </div>
   </div>
 </section>
