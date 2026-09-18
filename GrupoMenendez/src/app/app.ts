@@ -5,9 +5,10 @@ import { Footer } from './footer/footer';
 import { Home } from './home/home';
 import { Nosotros } from './nosotros/nosotros';
 import { ServiciosPagina } from './servicios-pagina/servicios-pagina';
+import { Proyectos } from './proyectos/proyectos';
 
 @Component({
-  imports: [RouterOutlet, Navbar, Footer, Home, Nosotros, ServiciosPagina],
+  imports: [RouterOutlet, Navbar, Footer, Home, Nosotros, ServiciosPagina, Proyectos],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
