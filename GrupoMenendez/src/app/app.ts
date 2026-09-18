@@ -4,9 +4,10 @@ import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
 import { Presentacion } from './presentacion/presentacion';
 import { SobreNosotros } from './sobre-nosotros/sobre-nosotros';
+import { Servicios } from './servicios/servicios';
 
 @Component({
-  imports: [RouterOutlet, Navbar, Footer, Presentacion, SobreNosotros],
+  imports: [RouterOutlet, Navbar, Footer, Presentacion, SobreNosotros, Servicios],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
